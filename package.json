@@ -4,19 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "nodemon --exec 'mocha --recursive -R min'  --compilers js:babel-core/register",
     "start": "babel-node index.js",
-    "build": "babel src -d lib"
+    "mocha": "mocha --compilers js:babel-core/register"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "assert": "^1.4.1",
     "express": "^4.14.0",
     "mocha": "^3.2.0",
-    "mongoose": "^4.7.6"
+    "mongoose": "^4.7.6",
+    "supertest": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "eslint-config-rallycoding": "^3.1.0"
   }

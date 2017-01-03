@@ -1,8 +1,10 @@
 {
+  "env": {
+    "mocha": true
+  },
   "extends": "rallycoding",
   "rules": {
-    "arrow-body-style": 0,
     "no-underscore-dangle": 0,
-    "radix": 0
+    "one-var": 0
   }
 }
