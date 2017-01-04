@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon --exec 'mocha --recursive -R min'  --compilers js:babel-core/register",
+    "test": "NODE_ENV=test nodemon --exec 'mocha --recursive -R min'  --compilers js:babel-core/register",
     "start": "babel-node index.js",
     "mocha": "mocha --compilers js:babel-core/register"
   },
