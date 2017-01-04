@@ -19,5 +19,12 @@ export default {
       .then(() => Driver.findById(driverId))
       .then(driver => res.send(driver))
       .catch(next);
+  },
+
+  delete(req, res, next) {
+    const driverId = req.params.id;
+    Driver.findByIdAndRemove(driverId)
+      .then(driver => res.ststus(204).send(driver))
+      .catch(next);
   }
 };
