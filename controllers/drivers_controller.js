@@ -5,9 +5,10 @@ export default {
     res.send({ hi: 'there' });
   },
 
-  create(req, res) {
+  create(req, res, next) {
     const driverProp = req.body;
     Driver.create(driverProp)
-      .then(driver => res.send(driver));
+      .then(driver => res.send(driver))
+      .catch(next);
   }
 };
